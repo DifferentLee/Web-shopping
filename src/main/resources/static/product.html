@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - LI Yiran's Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Product Details</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Product Categories</a></li>
+            <li><button id="back-button" class="nav-button">Back</button></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- 侧边栏 -->
+    <aside>
+        <div class="cart-summary">
+            <h3>Shopping List</h3>
+            <ul class="cart-items"></ul>
+            <p>Total: <span class="cart-total">$0.00</span></p>
+            <button id="clear-cart">Clear Cart</button>
+        </div>
+    </aside>
+
+    <main>
+        <section class="product-details">
+            <div class="product-image">
+                <img src="images/fullsize1.jpg" alt="Product 1 Full Size">
+            </div>
+            <div class="product-info">
+                <h2>Shampoo</h2>
+                <p class="price">$33.3</p>
+                <p class="description">This is a detailed description of Product 1.</p>
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2025 LI Yiran's Shopping Website</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

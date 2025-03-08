@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Category - LI Yiran's Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Product Category</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Product Categories</a></li>
+            <li><button id="back-button" class="nav-button">Back</button></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- 侧边栏 -->
+    <aside>
+        <div class="cart-summary">
+            <h3>Shopping List</h3>
+            <ul class="cart-items"></ul>
+            <p>Total: <span class="cart-total">$0.00</span></p>
+            <button id="clear-cart">Clear Cart</button>
+        </div>
+    </aside>
+
+    <main>
+        <section>
+            <h2>Category</h2>
+            <div class="category-thumbnails">
+                <a href="product.html?product=1">
+                    <img src="images/thumbnail1.jpg" alt="Product 1 Thumbnail">
+                    <p>Shampoo</p>
+                </a>
+                <a href="product.html?product=2">
+                    <img src="images/thumbnail2.jpg" alt="Product 2 Thumbnail">
+                    <p>Towel</p>
+                </a>
+                <a href="product.html?product=3">
+                    <img src="images/thumbnail3.jpg" alt="Product 3 Thumbnail">
+                    <p>Bowl</p>
+                </a>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2025 LI Yiran's Shopping Website</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
