@@ -1,30 +1,20 @@
 package com.example.leeproj3.controller;
 
-import com.example.leeproj3.entity.Cart;
-import com.example.leeproj3.service.CartService;
+import com.example.leeproj3.entity.Product;
+import com.example.leeproj3.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/cart")
 public class CartController {
+
     @Autowired
-    private CartService cartService;
+    private ProductService productService;
 
-    @GetMapping
-    public List<Cart> getCartItems() {
-        return cartService.getCartItems();
-    }
-
-    @PostMapping
-    public void addToCart(@RequestBody Cart cart) {
-        cartService.addToCart(cart);
-    }
-
-    @DeleteMapping("/{id}")
-    public void removeFromCart(@PathVariable Long id) {
-        cartService.removeFromCart(id);
+    // 根据 pid 返回产品信息，用于前端购物车展示
+    @GetMapping("/product/{pid}")
+    public Product getProductForCart(@PathVariable Long pid) {
+        return productService.getProductById(pid);
     }
 }

@@ -7,10 +7,21 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class CartService {
     @Autowired
     private CartMapper cartMapper;
 
-    public List<Cart> getAllCart() {return cartMapper.sele}
+    public List<Cart> getCartItems() {
+        return cartMapper.selectList(null);
+    }
+
+    public void addCartItem(Cart cart) {
+        cartMapper.insert(cart);
+    }
+
+    public void deleteCartItem(Long id) {
+        cartMapper.deleteById(id);
+    }
 }

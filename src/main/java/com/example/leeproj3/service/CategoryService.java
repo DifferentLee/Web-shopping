@@ -7,6 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+import com.example.leeproj3.entity.Category;
+import com.example.leeproj3.mapper.CategoryMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 @Service
 public class CategoryService {
     @Autowired
@@ -18,5 +25,9 @@ public class CategoryService {
 
     public void saveCategory(Category category) {
         categoryMapper.insert(category);
+    }
+
+    public void deleteCategory(Long catid) {
+        categoryMapper.deleteById(catid);
     }
 }

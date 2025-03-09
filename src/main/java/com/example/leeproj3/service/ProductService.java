@@ -18,8 +18,16 @@ public class ProductService {
         return productMapper.selectList(queryWrapper);
     }
 
+    public Product getProductById(Long pid) {
+        return productMapper.selectById(pid);
+    }
+
     public void saveProduct(Product product) {
         productMapper.insert(product);
+    }
+
+    public void deleteProduct(Long pid) {
+        productMapper.deleteById(pid);
     }
 }
 

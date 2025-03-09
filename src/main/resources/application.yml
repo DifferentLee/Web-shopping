@@ -18,6 +18,9 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: ASSIGN_ID
+upload:
+  path: src/main/resources/static/images
+
 
 #spring:
 #  datasource:
